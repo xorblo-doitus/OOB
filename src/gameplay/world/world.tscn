@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciceafugib0p4"]
+
+[ext_resource type="Script" path="res://src/gameplay/world/world.gd" id="1_nomqr"]
+[ext_resource type="PackedScene" uid="uid://cydou714l1g6v" path="res://src/gameplay/entities/player.tscn" id="2_enicr"]
+[ext_resource type="PackedScene" uid="uid://bnmdgmyiltuxv" path="res://src/gameplay/world/terrain/bloc.tscn" id="3_5nt47"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_nomqr")
+
+[node name="Player" parent="." instance=ExtResource("2_enicr")]
+position = Vector2(261, 150)
+
+[node name="Bloc" parent="." instance=ExtResource("3_5nt47")]
+position = Vector2(262, 349)
+
+[node name="Bloc2" parent="." instance=ExtResource("3_5nt47")]
+position = Vector2(138, 338)
+
+[node name="Bloc3" parent="." instance=ExtResource("3_5nt47")]
+position = Vector2(215, 348)
+
+[node name="Bloc4" parent="." instance=ExtResource("3_5nt47")]
+position = Vector2(308, 314)
