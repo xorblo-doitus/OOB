@@ -12,7 +12,7 @@ script = ExtResource("1_nomqr")
 
 [node name="Player" parent="." instance=ExtResource("2_enicr")]
 unique_name_in_owner = true
-position = Vector2(261, 150)
+position = Vector2(232, 338)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -33,10 +33,30 @@ position = Vector2(413, 213)
 color = Color(0, 0.756863, 0, 1)
 polygon = PackedVector2Array(-158, 42, -107, 8, -147, 15, -100, -58, -141, -45, -122, -167, 15, -74, -24, -59, 39, 0, -18, 3, 52, 46)
 
+[node name="Trunc" type="Polygon2D" parent="Tree1"]
+z_index = -16
+position = Vector2(-306, 181)
+color = Color(0.67451, 0.180392, 0, 1)
+polygon = PackedVector2Array(205, -147, 164, -27, 331, -28, 288, -150)
+
+[node name="Tree2" parent="." instance=ExtResource("6_t1arw")]
+position = Vector2(781, 335)
+rotation = 1.71565
+color = Color(0, 0.756863, 0, 1)
+polygon = PackedVector2Array(-158, 42, -107, 8, -147, 15, -100, -58, -141, -45, -6.3159, -174.92, 27.2109, -28.2235, -24, -59, 41.4995, 21.2319, -18, 3, 37.9347, 59.1436)
+
+[node name="Trunc" type="Polygon2D" parent="Tree2"]
+z_index = -16
+position = Vector2(-306, 181)
+rotation = -0.0245263
+color = Color(0.67451, 0.180392, 0, 1)
+polygon = PackedVector2Array(239.643, -141.725, 229.313, -102.199, 279.399, -96.1675, 271.411, -145.566)
+
 [node name="Trunc" parent="." instance=ExtResource("6_t1arw")]
-position = Vector2(627, 313)
-color = Color(0.674886, 0.17881, 0, 1)
-polygon = PackedVector2Array(-86, 51, -46, -24, -15, -20, 15, 57)
+position = Vector2(589, 349)
+rotation = 3.14159
+color = Color(0.67451, 0.180392, 0, 1)
+polygon = PackedVector2Array(-20.0001, 33.9999, -34.9999, -19.0002, 29.0001, -17.9999, 20.9999, 35.0001)
 
 [node name="LongPlatform" parent="." instance=ExtResource("4_skm66")]
 position = Vector2(257, 369)
