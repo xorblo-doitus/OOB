@@ -1,17 +1,22 @@
 extends CharacterBody2D
 
 
-var speed = 300.0
-var jump_velocity = -400.0
+var speed: float = 300.0
+var jump_velocity: float = -400.0
+var coyote_time_s: float = 0.1
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var _not_on_floor_since_s: float = 0.0
 
 func _physics_process(delta: float) -> void:
-	if not is_on_floor():
+	if is_on_floor():
+		_not_on_floor_since_s = 0.0
+	else:
+		_not_on_floor_since_s += delta
 		velocity.y += gravity * delta
 	
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and _not_on_floor_since_s < coyote_time_s:
 		velocity.y = jump_velocity
 	
 	var direction := Input.get_axis("left", "right")
