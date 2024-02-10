@@ -24,6 +24,20 @@ position = Vector2(256, 256)
 [node name="CameraZone2" parent="." instance=ExtResource("4_et3i5")]
 position = Vector2(768, 256)
 
+[node name="PolygonTerrain" parent="." instance=ExtResource("6_t1arw")]
+position = Vector2(107, 394)
+polygon = PackedVector2Array(83, -30, -184, -30, -130, -127, -81, -74, -81, -74, 76, -105)
+
+[node name="Tree1" parent="." instance=ExtResource("6_t1arw")]
+position = Vector2(413, 213)
+color = Color(0, 0.756863, 0, 1)
+polygon = PackedVector2Array(-158, 42, -107, 8, -147, 15, -100, -58, -141, -45, -122, -167, 15, -74, -24, -59, 39, 0, -18, 3, 52, 46)
+
+[node name="Trunc" parent="." instance=ExtResource("6_t1arw")]
+position = Vector2(627, 313)
+color = Color(0.674886, 0.17881, 0, 1)
+polygon = PackedVector2Array(-86, 51, -46, -24, -15, -20, 15, 57)
+
 [node name="LongPlatform" parent="." instance=ExtResource("4_skm66")]
 position = Vector2(257, 369)
 
@@ -35,7 +49,3 @@ position = Vector2(-255, 369)
 
 [node name="Bloc" parent="." instance=ExtResource("5_sdugo")]
 position = Vector2(-177, 349)
-
-[node name="PolygonTerrain" parent="." instance=ExtResource("6_t1arw")]
-position = Vector2(282, 262)
-polygon = PackedVector2Array(80, -44, -120, 52, -157, -123, -81, -74, -81, -74, 76, -105)
