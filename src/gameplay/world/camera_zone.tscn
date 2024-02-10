@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://delrjt1dlkmbj"]
+[gd_scene load_steps=3 format=3 uid="uid://delrjt1dlkmbj"]
+
+[ext_resource type="Script" path="res://src/gameplay/world/camera_zone.gd" id="1_g8iae"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ccnru"]
 size = Vector2(512, 512)
 
 [node name="CameraZone" type="Area2D" groups=["camera_zone"]]
+script = ExtResource("1_g8iae")
 
-[node name="CameraZone" type="CollisionShape2D" parent="."]
+[node name="Zone" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ccnru")
+debug_color = Color(0, 0, 0, 0)

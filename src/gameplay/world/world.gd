@@ -12,11 +12,13 @@ func _process(delta: float) -> void:
 	
 	for camera_zone: Area2D in get_tree().get_nodes_in_group(&"camera_zone"):
 		if camera_zone.overlaps_body(player):
+			get_tree().call_group(&"camera_zone", &"hide")
 			camera_2d.position_smoothing_enabled = false
 			camera_2d.position = camera_zone.position
 			current_zone = camera_zone
 			return
 	
 	if current_zone == null:
+		get_tree().call_group(&"camera_zone", &"show")
 		camera_2d.position_smoothing_enabled = true
 		camera_2d.position = player.position
