@@ -10,7 +10,13 @@ var forces: Dictionary = {}
 
 var _not_on_floor_since_s: float = 0.0
 
+var respawn_position: Vector2 = Vector2(400, 400)
+
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("respawn"):
+		respawn()
+		return
+	
 	get_tree().set_group(&"one_way", "disabled", Input.is_action_pressed(&"down"))
 	
 	for force in forces.values():
@@ -34,5 +40,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
-
+	
 	move_and_slide()
+
+
+func respawn() -> void:
+	velocity = Vector2.ZERO
+	global_position = respawn_position

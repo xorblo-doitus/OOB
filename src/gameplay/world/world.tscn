@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ciceafugib0p4"]
+[gd_scene load_steps=12 format=3 uid="uid://ciceafugib0p4"]
 
 [ext_resource type="Script" path="res://src/gameplay/world/world.gd" id="1_nomqr"]
 [ext_resource type="PackedScene" uid="uid://cydou714l1g6v" path="res://src/gameplay/entities/player.tscn" id="2_enicr"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://djen1emxwvi8r" path="res://src/gameplay/world/terrain/one_way_plateform.tscn" id="6_2wxex"]
 [ext_resource type="PackedScene" uid="uid://d313j65dc033f" path="res://src/gameplay/world/terrain/polygon_terrain.tscn" id="6_t1arw"]
 [ext_resource type="PackedScene" uid="uid://drtgovpc4eh4f" path="res://src/gameplay/world/terrain/water.tscn" id="7_bqvld"]
+[ext_resource type="PackedScene" uid="uid://c8qov0y3ns4fh" path="res://src/gameplay/world/interactive/respawn_point.tscn" id="8_str6s"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_crqjm"]
 a = Vector2(20, -29)
@@ -149,3 +150,9 @@ position = Vector2(-61, -304.5)
 shape = SubResource("RectangleShape2D_oqi2p")
 
 [node name="Water" parent="Water2/CollisionShape2D" instance=ExtResource("7_bqvld")]
+
+[node name="RespawnPoint" parent="." instance=ExtResource("8_str6s")]
+position = Vector2(475, 403)
+
+[node name="RespawnPoint2" parent="." instance=ExtResource("8_str6s")]
+position = Vector2(997, 422)
