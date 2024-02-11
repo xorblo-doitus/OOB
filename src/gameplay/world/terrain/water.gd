@@ -50,6 +50,5 @@ func _get_body_force(body: PhysicsBody2D) -> Vector2:
 	
 	if depth:
 		result.y -= body.velocity.y * 60 * 0.1
-	print(result.y)
 	
 	return result
