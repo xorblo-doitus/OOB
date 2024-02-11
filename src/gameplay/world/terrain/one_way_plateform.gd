@@ -8,8 +8,8 @@ extends StaticBody2D
 	set(new):
 		width = new
 		if not is_node_ready():
-			ready.connect(update_width, CONNECT_ONE_SHOT)
 			return
+		
 		update_width()
 
 

@@ -20,3 +20,5 @@ modulate = Color(0.858824, 0.294118, 0, 1)
 z_index = -128
 points = PackedVector2Array(-50, 2, 50, 2)
 width = 4.0
+
+[connection signal="ready" from="." to="." method="update_width"]
