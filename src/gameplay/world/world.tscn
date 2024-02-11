@@ -20,7 +20,7 @@ script = ExtResource("1_nomqr")
 
 [node name="Player" parent="." instance=ExtResource("2_enicr")]
 unique_name_in_owner = true
-position = Vector2(232, 338)
+position = Vector2(216, 39)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -84,8 +84,11 @@ position = Vector2(-255, 369)
 [node name="Bloc" parent="." instance=ExtResource("5_sdugo")]
 position = Vector2(-177, 349)
 
+[node name="Bloc2" parent="." instance=ExtResource("5_sdugo")]
+position = Vector2(216, 70)
+
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(-121, 384)
+position = Vector2(81, 234)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_pg4ov")

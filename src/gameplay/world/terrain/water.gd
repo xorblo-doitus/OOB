@@ -37,12 +37,19 @@ func _on_body_exited(body: PhysicsBody2D) -> void:
 
 
 func _get_body_force(body: PhysicsBody2D) -> Vector2:
+	var depth = max(
+		0, 
+		body.position.y - 15
+		-(position.y - size.y) # Heighest position
+	)
+	
 	var result: Vector2 = Vector2(0,
 		-body.gravity
-		-(
-			body.position.y
-			-(position.y - size.y) # Heighest position
-		)
-	) - body.velocity * 60 * 0.1
+		- depth ** 1.2
+	)# - body.velocity * 60 * 0.1
+	
+	if depth:
+		result.y -= body.velocity.y * 60 * 0.1
+	print(result.y)
 	
 	return result

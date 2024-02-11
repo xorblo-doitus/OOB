@@ -28,6 +28,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and _not_on_floor_since_s < coyote_time_s:
 		velocity.y = jump_velocity
 	
+	
+	#print(velocity.y)
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * speed
