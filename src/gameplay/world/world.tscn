@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://ciceafugib0p4"]
+[gd_scene load_steps=9 format=3 uid="uid://ciceafugib0p4"]
 
 [ext_resource type="Script" path="res://src/gameplay/world/world.gd" id="1_nomqr"]
 [ext_resource type="PackedScene" uid="uid://cydou714l1g6v" path="res://src/gameplay/entities/player.tscn" id="2_enicr"]
 [ext_resource type="PackedScene" uid="uid://delrjt1dlkmbj" path="res://src/gameplay/world/camera_zone.tscn" id="4_et3i5"]
 [ext_resource type="PackedScene" uid="uid://clr627lga6td1" path="res://src/gameplay/world/terrain/long_platform.tscn" id="4_skm66"]
-[ext_resource type="PackedScene" uid="uid://bnmdgmyiltuxv" path="res://src/gameplay/world/terrain/bloc.tscn" id="5_sdugo"]
 [ext_resource type="PackedScene" uid="uid://d313j65dc033f" path="res://src/gameplay/world/terrain/polygon_terrain.tscn" id="6_t1arw"]
 [ext_resource type="PackedScene" uid="uid://drtgovpc4eh4f" path="res://src/gameplay/world/terrain/water.tscn" id="7_bqvld"]
 
@@ -13,18 +12,20 @@ a = Vector2(20, -29)
 b = Vector2(-15, -29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pg4ov"]
-size = Vector2(200, 200)
+size = Vector2(323, 76)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_nomqr")
 
 [node name="Player" parent="." instance=ExtResource("2_enicr")]
 unique_name_in_owner = true
-position = Vector2(216, 39)
+z_index = -64
+position = Vector2(359, 400)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(256, 256)
+visible = false
+position = Vector2(-402, -335)
 
 [node name="CameraZone" parent="." instance=ExtResource("4_et3i5")]
 position = Vector2(256, 256)
@@ -33,36 +34,52 @@ position = Vector2(256, 256)
 position = Vector2(768, 256)
 
 [node name="PolygonTerrain" parent="." instance=ExtResource("6_t1arw")]
-position = Vector2(107, 394)
-polygon = PackedVector2Array(83, -30, -184, -30, -130, -127, -81, -74, -81, -74, 76, -105)
+position = Vector2(204, 487)
+polygon = PackedVector2Array(341, -61, 481, -51, 833, -30, 839, 106, -8, 64, 0, -27, 53, -53)
+
+[node name="PolygonTerrain2" parent="." instance=ExtResource("6_t1arw")]
+position = Vector2(204, 487)
+polygon = PackedVector2Array(-123, -25, -124, 57, -397, 92, -348, -121)
 
 [node name="Tree1" parent="." instance=ExtResource("6_t1arw")]
-position = Vector2(413, 213)
+position = Vector2(413, 296)
 color = Color(0, 0.756863, 0, 1)
-polygon = PackedVector2Array(-158, 42, -107, 8, -147, 15, -100, -58, -141, -45, -122, -167, 15, -74, -24, -59, 39, 0, -18, 3, 52, 46)
+polygon = PackedVector2Array(-116, 55, -66, -21, -109, 3, -80, -75, -106, -57, -71, -135, -1, -104, -34, -93, 44, -31, -17, -34, 73, 15)
 
 [node name="Trunc" type="Polygon2D" parent="Tree1"]
-z_index = -16
+z_index = -128
 position = Vector2(-306, 181)
 color = Color(0.67451, 0.180392, 0, 1)
-polygon = PackedVector2Array(205, -147, 164, -27, 331, -28, 288, -150)
+polygon = PackedVector2Array(267, -142, 277, -27, 336, -29, 295, -153)
+
+[node name="Tree3" parent="." instance=ExtResource("6_t1arw")]
+position = Vector2(678, 284)
+color = Color(0, 0.756863, 0, 1)
+polygon = PackedVector2Array(-124, -15, -53, -94, -110, -88, -41, -167, -106, -154, -35, -216, -83, -204, -16, -265, 65, -209, -1, -218, 83, -145, 16, -163, 83, -79, 27, -94, 87, -10)
+
+[node name="Trunc" type="Polygon2D" parent="Tree3"]
+z_index = -128
+position = Vector2(-306, 181)
+color = Color(0.67451, 0.180392, 0, 1)
+polygon = PackedVector2Array(279, -222, 266, -19, 326, -17, 312, -223)
 
 [node name="Tree2" parent="." instance=ExtResource("6_t1arw")]
-position = Vector2(781, 335)
+z_index = -16
+position = Vector2(804, 418)
 rotation = 1.71565
 color = Color(0, 0.756863, 0, 1)
 polygon = PackedVector2Array(-158, 42, -107, 8, -147, 15, -100, -58, -141, -45, -6.3159, -174.92, 27.2109, -28.2235, -24, -59, 41.4995, 21.2319, -18, 3, 37.9347, 59.1436)
 
 [node name="Trunc" type="Polygon2D" parent="Tree2"]
-z_index = -16
+z_index = -128
 position = Vector2(-306, 181)
 rotation = -0.0245263
 color = Color(0.67451, 0.180392, 0, 1)
 polygon = PackedVector2Array(239.643, -141.725, 229.313, -102.199, 279.399, -96.1675, 271.411, -145.566)
 
 [node name="Trunc" type="Polygon2D" parent="."]
-z_index = -16
-position = Vector2(587, 340)
+z_index = -128
+position = Vector2(587, 423)
 color = Color(0.67451, 0.180392, 0, 1)
 polygon = PackedVector2Array(-29, 31, -15, -29, 19, -29, 39, 30)
 
@@ -72,25 +89,20 @@ polygon = PackedVector2Array(-29, 31, -15, -29, 19, -29, 39, 30)
 shape = SubResource("SegmentShape2D_crqjm")
 one_way_collision = true
 
-[node name="LongPlatform" parent="." instance=ExtResource("4_skm66")]
-position = Vector2(257, 369)
+[node name="Border" parent="." instance=ExtResource("4_skm66")]
+position = Vector2(-1, 186)
+rotation = 1.57079
 
-[node name="LongPlatform2" parent="." instance=ExtResource("4_skm66")]
-position = Vector2(769, 369)
+[node name="Border2" parent="." instance=ExtResource("4_skm66")]
+position = Vector2(1023, 122)
+rotation = 1.57079
 
-[node name="LongPlatform3" parent="." instance=ExtResource("4_skm66")]
-position = Vector2(-255, 369)
+[node name="Water" type="Area2D" parent="."]
+z_index = -8
+position = Vector2(127, 542)
 
-[node name="Bloc" parent="." instance=ExtResource("5_sdugo")]
-position = Vector2(-177, 349)
-
-[node name="Bloc2" parent="." instance=ExtResource("5_sdugo")]
-position = Vector2(216, 70)
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(81, 234)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Water"]
+position = Vector2(61.5, -62)
 shape = SubResource("RectangleShape2D_pg4ov")
 
-[node name="Water" parent="Area2D/CollisionShape2D" instance=ExtResource("7_bqvld")]
+[node name="Water" parent="Water/CollisionShape2D" instance=ExtResource("7_bqvld")]
