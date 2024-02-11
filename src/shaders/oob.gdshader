@@ -1,6 +1,7 @@
 shader_type canvas_item;
 
 uniform sampler2D noise : repeat_enable;
+uniform sampler2D image : repeat_enable;
 
 void vertex() {
 	// Called for every vertex the material is visible on.
@@ -19,4 +20,6 @@ void fragment() {
 	COLOR.a *= texture(noise,
 	vec2(pos.x + cos(TIME * texture(noise, SCREEN_UV.xx).b), TIME * 0.1)
 	).b + 0.5 - distance(SCREEN_UV, vec2(0.5, 0.5)) * 2.0;
+	
+	COLOR.a *= texture(image, vec2(SCREEN_UV.x/25.0, SCREEN_UV.y/32.0) * 1024.0).a;
 }
