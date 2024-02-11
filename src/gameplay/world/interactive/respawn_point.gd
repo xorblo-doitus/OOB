@@ -1,12 +1,14 @@
 extends Area2D
 
 
+@onready var line_2d: Line2D = $Line2D
 @onready var polygon_2d: Polygon2D = $Polygon2D
 
 
 
 func _ready() -> void:
 	disable()
+	update_material()
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -17,5 +19,21 @@ func _on_body_entered(body: Node2D) -> void:
 		
 
 
+func _set(property: StringName, value: Variant) -> bool:
+	match property:
+		&"material":
+			update_material()
+	
+	return false
+
+
 func disable() -> void:
 	polygon_2d.color = Color.GRAY
+
+
+func update_material() -> void:
+	if not is_node_ready():
+		return
+	
+	polygon_2d.material = material
+	line_2d.material = material

@@ -25,7 +25,7 @@ script = ExtResource("1_nomqr")
 [node name="Player" parent="." instance=ExtResource("2_enicr")]
 unique_name_in_owner = true
 z_index = -64
-position = Vector2(1000, 430)
+position = Vector2(818, -237)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -156,3 +156,7 @@ position = Vector2(475, 403)
 
 [node name="RespawnPoint2" parent="." instance=ExtResource("8_str6s")]
 position = Vector2(997, 422)
+
+[node name="RespawnPoint3" parent="." instance=ExtResource("8_str6s")]
+material = ExtResource("5_gag1f")
+position = Vector2(959, -173)
