@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://djen1emxwvi8r"]
+
+[ext_resource type="Script" path="res://src/gameplay/world/terrain/one_way_plateform.gd" id="1_jtr0r"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_crqjm"]
+resource_local_to_scene = true
+a = Vector2(-50, 0)
+b = Vector2(50, 0)
+
+[node name="OneWayPlateform" type="StaticBody2D"]
+script = ExtResource("1_jtr0r")
+width = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["one_way"]]
+shape = SubResource("SegmentShape2D_crqjm")
+one_way_collision = true
+
+[node name="Line2D" type="Line2D" parent="."]
+modulate = Color(0.858824, 0.294118, 0, 1)
+z_index = -128
+points = PackedVector2Array(-50, 2, 50, 2)
+width = 4.0
