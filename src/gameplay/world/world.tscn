@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ciceafugib0p4"]
+[gd_scene load_steps=10 format=3 uid="uid://ciceafugib0p4"]
 
 [ext_resource type="Script" path="res://src/gameplay/world/world.gd" id="1_nomqr"]
 [ext_resource type="PackedScene" uid="uid://cydou714l1g6v" path="res://src/gameplay/entities/player.tscn" id="2_enicr"]
@@ -6,10 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://clr627lga6td1" path="res://src/gameplay/world/terrain/long_platform.tscn" id="4_skm66"]
 [ext_resource type="PackedScene" uid="uid://bnmdgmyiltuxv" path="res://src/gameplay/world/terrain/bloc.tscn" id="5_sdugo"]
 [ext_resource type="PackedScene" uid="uid://d313j65dc033f" path="res://src/gameplay/world/terrain/polygon_terrain.tscn" id="6_t1arw"]
+[ext_resource type="PackedScene" uid="uid://drtgovpc4eh4f" path="res://src/gameplay/world/terrain/water.tscn" id="7_bqvld"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_crqjm"]
 a = Vector2(20, -29)
 b = Vector2(-15, -29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pg4ov"]
+size = Vector2(200, 200)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_nomqr")
@@ -59,7 +63,6 @@ polygon = PackedVector2Array(239.643, -141.725, 229.313, -102.199, 279.399, -96.
 [node name="Trunc" type="Polygon2D" parent="."]
 z_index = -16
 position = Vector2(587, 340)
-scale = Vector2(1, 1)
 color = Color(0.67451, 0.180392, 0, 1)
 polygon = PackedVector2Array(-29, 31, -15, -29, 19, -29, 39, 30)
 
@@ -80,3 +83,11 @@ position = Vector2(-255, 369)
 
 [node name="Bloc" parent="." instance=ExtResource("5_sdugo")]
 position = Vector2(-177, 349)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-121, 384)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_pg4ov")
+
+[node name="Water" parent="Area2D/CollisionShape2D" instance=ExtResource("7_bqvld")]

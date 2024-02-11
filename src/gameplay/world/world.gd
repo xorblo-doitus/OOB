@@ -4,7 +4,7 @@ extends Node2D
 @onready var camera_2d: Camera2D = %Camera2D
 @onready var current_zone: Area2D
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if current_zone and current_zone.overlaps_body(player):
 		return
 	
