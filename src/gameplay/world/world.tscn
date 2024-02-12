@@ -114,7 +114,7 @@ script = ExtResource("1_nomqr")
 [node name="Player" parent="." instance=ExtResource("2_enicr")]
 unique_name_in_owner = true
 z_index = -64
-position = Vector2(-2950, 1127)
+position = Vector2(282, 410)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
