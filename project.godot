@@ -27,6 +27,10 @@ window/size/viewport_width=512
 window/size/viewport_height=512
 window/stretch/mode="canvas_items"
 
+[gui]
+
+theme/custom="res://src/assets/themes/default_theme.tres"
+
 [input]
 
 fullscreen={
