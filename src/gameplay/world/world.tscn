@@ -121,6 +121,7 @@ shape = SubResource("SegmentShape2D_crqjm")
 one_way_collision = true
 
 [node name="OneWayPlateform" parent="." instance=ExtResource("6_2wxex")]
+material = ExtResource("5_gag1f")
 position = Vector2(215, -33)
 width = 330.0
 
@@ -128,10 +129,12 @@ width = 330.0
 position = Vector2(215, -33)
 
 [node name="OneWayPlateform3" parent="Node2D" instance=ExtResource("6_2wxex")]
+material = ExtResource("5_gag1f")
 position = Vector2(111, -142)
 width = 64.0
 
 [node name="OneWayPlateform5" parent="Node2D" instance=ExtResource("6_2wxex")]
+material = ExtResource("5_gag1f")
 position = Vector2(-76, -139)
 width = 64.0
 
@@ -139,10 +142,12 @@ width = 64.0
 position = Vector2(1203, -140)
 
 [node name="OneWayPlateform3" parent="Node2D2" instance=ExtResource("6_2wxex")]
+material = ExtResource("5_gag1f")
 position = Vector2(119, -126)
 width = 64.0
 
 [node name="OneWayPlateform5" parent="Node2D2" instance=ExtResource("6_2wxex")]
+material = ExtResource("5_gag1f")
 position = Vector2(-76, -139)
 width = 64.0
 

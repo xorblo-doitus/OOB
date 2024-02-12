@@ -12,9 +12,28 @@ extends StaticBody2D
 		
 		update_width()
 
+func _ready() -> void:
+	update_width()
+	update_material()
+
+
+func _set(property: StringName, _value: Variant) -> bool:
+	match property:
+		&"material":
+			update_material()
+	
+	return false
+
 
 func update_width() -> void:
 	collision_shape_2d.shape.a.x = width/-2
 	collision_shape_2d.shape.b.x = width/2
 	line_2d.points[0].x = width/-2
 	line_2d.points[1].x = width/2
+
+
+func update_material() -> void:
+	if not is_node_ready():
+		return
+	
+	line_2d.material = material

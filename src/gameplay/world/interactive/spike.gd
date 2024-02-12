@@ -13,7 +13,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 
-func _set(property: StringName, value: Variant) -> bool:
+func _set(property: StringName, _value: Variant) -> bool:
 	match property:
 		&"material":
 			update_material()
