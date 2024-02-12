@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ciceafugib0p4"]
+[gd_scene load_steps=13 format=3 uid="uid://ciceafugib0p4"]
 
 [ext_resource type="Script" path="res://src/gameplay/world/world.gd" id="1_nomqr"]
 [ext_resource type="PackedScene" uid="uid://cydou714l1g6v" path="res://src/gameplay/entities/player.tscn" id="2_enicr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d313j65dc033f" path="res://src/gameplay/world/terrain/polygon_terrain.tscn" id="6_t1arw"]
 [ext_resource type="PackedScene" uid="uid://drtgovpc4eh4f" path="res://src/gameplay/world/terrain/water.tscn" id="7_bqvld"]
 [ext_resource type="PackedScene" uid="uid://c8qov0y3ns4fh" path="res://src/gameplay/world/interactive/respawn_point.tscn" id="8_str6s"]
+[ext_resource type="PackedScene" uid="uid://cvurdtymxm38r" path="res://src/gameplay/world/interactive/spike.tscn" id="9_afmow"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_crqjm"]
 a = Vector2(20, -29)
@@ -25,7 +26,7 @@ script = ExtResource("1_nomqr")
 [node name="Player" parent="." instance=ExtResource("2_enicr")]
 unique_name_in_owner = true
 z_index = -64
-position = Vector2(818, -237)
+position = Vector2(964, -213)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -78,7 +79,7 @@ polygon = PackedVector2Array(267, -142, 277, -27, 336, -29, 295, -153)
 [node name="Tree3" parent="." instance=ExtResource("6_t1arw")]
 position = Vector2(678, 284)
 color = Color(0, 0.756863, 0, 1)
-polygon = PackedVector2Array(-124, -15, -53, -94, -110, -88, -41, -167, -106, -154, -35, -216, -83, -204, -16, -265, 65, -209, -1, -218, 83, -145, 16, -163, 83, -79, 27, -94, 107, -33)
+polygon = PackedVector2Array(-124, -15, -53, -94, -110, -88, -41, -167, -106, -154, -35, -216, -90, -213, -12, -291, 65, -209, 5, -219, 83, -145, 16, -163, 83, -79, 27, -94, 107, -33)
 
 [node name="Trunc" type="Polygon2D" parent="Tree3"]
 z_index = -128
@@ -160,3 +161,24 @@ position = Vector2(997, 422)
 [node name="RespawnPoint3" parent="." instance=ExtResource("8_str6s")]
 material = ExtResource("5_gag1f")
 position = Vector2(959, -173)
+
+[node name="Spike" parent="." instance=ExtResource("9_afmow")]
+position = Vector2(362, 439)
+
+[node name="Spike2" parent="." instance=ExtResource("9_afmow")]
+position = Vector2(891, -157)
+
+[node name="Spike3" parent="." instance=ExtResource("9_afmow")]
+position = Vector2(856, -157)
+
+[node name="Spike4" parent="." instance=ExtResource("9_afmow")]
+position = Vector2(657, -169)
+
+[node name="Spike5" parent="." instance=ExtResource("9_afmow")]
+position = Vector2(614, -165)
+
+[node name="Spike6" parent="." instance=ExtResource("9_afmow")]
+position = Vector2(576, -159)
+
+[node name="Spike7" parent="." instance=ExtResource("9_afmow")]
+position = Vector2(535, -153)

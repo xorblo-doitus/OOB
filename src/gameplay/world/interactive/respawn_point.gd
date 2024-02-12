@@ -15,7 +15,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if &"respawn_position" in body:
 		body.respawn_position = global_position
 		get_tree().call_group(&"respawn_point", &"disable")
-		polygon_2d.color = Color.RED
+		polygon_2d.color = Color.YELLOW
 		
 
 

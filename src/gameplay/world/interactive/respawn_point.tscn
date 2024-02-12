@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/gameplay/world/interactive/respawn_point.gd" id="1_wan65"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_osptb"]
-size = Vector2(37, 64)
+size = Vector2(31, 64)
 
 [node name="RespawnPoint" type="Area2D" groups=["respawn_point"]]
 z_index = -256
@@ -15,9 +15,11 @@ shape = SubResource("RectangleShape2D_osptb")
 
 [node name="Line2D" type="Line2D" parent="."]
 points = PackedVector2Array(0, 32, 0, -32)
+width = 4.0
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(1, 0, 0, 1)
+position = Vector2(-3, 0)
+color = Color(1, 1, 0, 1)
 polygon = PackedVector2Array(5, -32, 32, -17, 5, -8)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

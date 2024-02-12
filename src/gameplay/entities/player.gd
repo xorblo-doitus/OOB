@@ -10,7 +10,7 @@ var forces: Dictionary = {}
 
 var _not_on_floor_since_s: float = 0.0
 
-var respawn_position: Vector2 = Vector2(400, 400)
+var respawn_position: Vector2 = Vector2(289, 412)
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("respawn"):
