@@ -3,13 +3,13 @@
 [ext_resource type="FontFile" uid="uid://kaxbgd8gukbk" path="res://src/assets/fonts/ProtestStrike-Regular.ttf" id="1_14v1c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8p3bb"]
-content_margin_left = 8.0
-content_margin_top = 8.0
-content_margin_right = 8.0
-content_margin_bottom = 8.0
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
 bg_color = Color(0, 0, 0, 1)
 
 [resource]
 default_font = ExtResource("1_14v1c")
-default_font_size = 32
+default_font_size = 24
 Label/styles/normal = SubResource("StyleBoxFlat_8p3bb")

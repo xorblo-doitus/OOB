@@ -114,7 +114,7 @@ script = ExtResource("1_nomqr")
 [node name="Player" parent="." instance=ExtResource("2_enicr")]
 unique_name_in_owner = true
 z_index = -64
-position = Vector2(-567, 334)
+position = Vector2(17, -172)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -154,7 +154,7 @@ polygon = PackedVector2Array(99, -333, 44, 248, -32, 218, 21, -338)
 [node name="Rock3" parent="." instance=ExtResource("6_t1arw")]
 position = Vector2(-297, 188)
 color = Color(0.458824, 0.458824, 0.458824, 1)
-polygon = PackedVector2Array(103, -505, 44, 248, -32, 218, -239, -116, -548, -220)
+polygon = PackedVector2Array(103, -505, 46, 265, -18, 260, -32, 218, -183, 152, -239, -116, -548, -220)
 
 [node name="Grass1" parent="." instance=ExtResource("6_t1arw")]
 z_index = 8
@@ -342,6 +342,10 @@ autoplay = "float"
 
 [node name="Spike" parent="." instance=ExtResource("9_afmow")]
 position = Vector2(362, 439)
+
+[node name="Spike8" parent="." instance=ExtResource("9_afmow")]
+position = Vector2(-242, 161)
+rotation = 1.63489
 
 [node name="Spike2" parent="." instance=ExtResource("9_afmow")]
 material = ExtResource("5_gag1f")
