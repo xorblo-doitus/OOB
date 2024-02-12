@@ -11,5 +11,5 @@ bg_color = Color(0, 0, 0, 1)
 
 [resource]
 default_font = ExtResource("1_14v1c")
-default_font_size = 24
+default_font_size = 32
 Label/styles/normal = SubResource("StyleBoxFlat_8p3bb")

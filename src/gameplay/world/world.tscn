@@ -114,7 +114,7 @@ script = ExtResource("1_nomqr")
 [node name="Player" parent="." instance=ExtResource("2_enicr")]
 unique_name_in_owner = true
 z_index = -64
-position = Vector2(17, -172)
+position = Vector2(-2950, 1127)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -123,6 +123,9 @@ position = Vector2(-402, -335)
 
 [node name="CameraZone5" parent="." instance=ExtResource("4_et3i5")]
 position = Vector2(-768, 256)
+
+[node name="CameraZone6" parent="." instance=ExtResource("4_et3i5")]
+position = Vector2(-768, 768)
 
 [node name="CameraZone4" parent="." instance=ExtResource("4_et3i5")]
 position = Vector2(-256, 256)
@@ -329,6 +332,11 @@ position = Vector2(959, -173)
 material = ExtResource("5_gag1f")
 position = Vector2(27, -171)
 
+[node name="RespawnPoint5" parent="." instance=ExtResource("8_str6s")]
+material = ExtResource("5_gag1f")
+position = Vector2(-286, 798)
+rotation = -0.420436
+
 [node name="Moving" type="Node2D" parent="."]
 position = Vector2(-394, 426)
 
@@ -457,6 +465,7 @@ color = Color(0.458824, 0.458824, 0.458824, 1)
 polygon = PackedVector2Array(103, -505, 40, 148, 156, 265, -37, 272, -310, -227)
 
 [node name="Won" parent="Win" instance=ExtResource("11_0ljec")]
+rotation = 0.221657
 
 [node name="Missed" parent="Win" instance=ExtResource("11_0ljec")]
 offset_left = -157.0
@@ -465,3 +474,196 @@ offset_right = 247.0
 offset_bottom = 80.0
 rotation = -0.270332
 text = "But you missed something..."
+
+[node name="TrueWin" type="Node2D" parent="."]
+position = Vector2(1147, 713)
+
+[node name="OneWayPlateform4" parent="TrueWin" instance=ExtResource("6_2wxex")]
+position = Vector2(-1708, 183)
+
+[node name="DeathPath" type="Node2D" parent="TrueWin"]
+rotation = 2.87345
+
+[node name="Spike9" parent="TrueWin/DeathPath" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(1225.22, 247.455)
+rotation = -3.15182
+
+[node name="Spike10" parent="TrueWin/DeathPath" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(1267.58, 251.832)
+rotation = -3.08574
+
+[node name="Spike11" parent="TrueWin/DeathPath" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(1308, 255.68)
+rotation = -3.0595
+
+[node name="Spike12" parent="TrueWin/DeathPath" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(1345.1, 256.539)
+rotation = -3.03252
+
+[node name="Spike13" parent="TrueWin/DeathPath" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(1327.68, 380.347)
+rotation = -0.523598
+
+[node name="Spike17" parent="TrueWin/DeathPath" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(1367.73, 347.796)
+rotation = -0.149453
+
+[node name="Spike14" parent="TrueWin/DeathPath" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(1109.47, 332.837)
+rotation = 0.320759
+
+[node name="Spike16" parent="TrueWin/DeathPath" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(1096.39, 384.208)
+rotation = -0.299953
+
+[node name="Spike15" parent="TrueWin/DeathPath" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(1064.59, 269.691)
+rotation = 3.01883
+
+[node name="OOBground3" parent="TrueWin/DeathPath" instance=ExtResource("6_t1arw")]
+material = ExtResource("5_gag1f")
+position = Vector2(1279.84, 309.128)
+color = Color(0.458824, 0.458824, 0.458824, 1)
+polygon = PackedVector2Array(-124, -111, 249, -96, 209, -20, 153, -34, -54, -59, -258, -26, -396, 41, -342, -91)
+
+[node name="DeathPathReverse" type="Node2D" parent="TrueWin"]
+position = Vector2(-3911, 507)
+
+[node name="Spike9" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(99, -202)
+rotation = -3.15182
+
+[node name="Spike10" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(98.0001, -97)
+rotation = -3.08574
+
+[node name="Spike11" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(148.41, -202.775)
+rotation = -3.0595
+
+[node name="Spike12" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(185.51, -201.916)
+rotation = -3.03252
+
+[node name="Spike13" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(164, -67)
+rotation = -0.0121222
+
+[node name="Spike17" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(208.14, -110.659)
+rotation = -0.149453
+
+[node name="Spike14" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(-50.1201, -125.618)
+rotation = 0.320759
+
+[node name="Spike16" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(-63.2001, -74.247)
+rotation = -0.299953
+
+[node name="Spike15" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(-95.0001, -188.764)
+rotation = 3.01883
+
+[node name="Spike19" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(-135, -145)
+rotation = 3.43096
+
+[node name="Spike18" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(-120, -102)
+rotation = 3.01883
+
+[node name="OOBground3" parent="TrueWin/DeathPathReverse" instance=ExtResource("6_t1arw")]
+material = ExtResource("5_gag1f")
+position = Vector2(91.3988, 29.8298)
+color = Color(0.458824, 0.458824, 0.458824, 1)
+polygon = PackedVector2Array(-124, -111, 249, -96, 209, -20, 153, -34, -54, -59, -258, -26, -396, 41, -532.399, 18.1702, -783.399, -69.8298, -795.399, -205.83, -715.399, -215.83, -710.399, -157.83, -660.399, -95.8298, -342, -91)
+
+[node name="RespawnPoint6" parent="TrueWin/DeathPathReverse" instance=ExtResource("8_str6s")]
+material = ExtResource("5_gag1f")
+position = Vector2(282, -96)
+
+[node name="RespawnPoint7" parent="TrueWin/DeathPathReverse" instance=ExtResource("8_str6s")]
+material = ExtResource("5_gag1f")
+position = Vector2(20, -108)
+
+[node name="TrueWon3" parent="TrueWin" instance=ExtResource("11_0ljec")]
+material = ExtResource("5_gag1f")
+offset_left = -2434.0
+offset_top = 68.0
+offset_right = -2276.0
+offset_bottom = 115.0
+rotation = -0.199698
+text = "Nothing more..."
+
+[node name="TrueWon4" parent="TrueWin" instance=ExtResource("11_0ljec")]
+material = ExtResource("5_gag1f")
+offset_left = -2705.0
+offset_top = 247.0
+offset_right = -2595.0
+offset_bottom = 294.0
+rotation = 0.251147
+text = "For real"
+
+[node name="TrueWon5" parent="TrueWin" instance=ExtResource("11_0ljec")]
+material = ExtResource("5_gag1f")
+offset_left = -3086.0
+offset_top = 522.0
+offset_right = -2844.0
+offset_bottom = 569.0
+rotation = -0.340094
+text = "Just stop playing"
+
+[node name="TrueWon6" parent="TrueWin" instance=ExtResource("11_0ljec")]
+material = ExtResource("5_gag1f")
+offset_left = -3546.0
+offset_top = 468.0
+offset_right = -3304.0
+offset_bottom = 515.0
+text = "OK, one last trial"
+
+[node name="TrueWon7" parent="TrueWin" instance=ExtResource("11_0ljec")]
+material = ExtResource("5_gag1f")
+offset_left = -4527.0
+offset_top = 318.0
+offset_right = -4287.0
+offset_bottom = 365.0
+text = "go rest your eyes"
+
+[node name="Node2D" type="Node2D" parent="TrueWin"]
+
+[node name="TrueWon" parent="TrueWin/Node2D" instance=ExtResource("11_0ljec")]
+offset_left = -1964.0
+offset_top = -24.0
+offset_right = -1806.0
+offset_bottom = 23.0
+rotation = -0.199698
+text = "Incredible !"
+
+[node name="TrueWon2" parent="TrueWin/Node2D" instance=ExtResource("11_0ljec")]
+offset_left = -2117.0
+offset_top = 61.0001
+offset_right = -1769.0
+offset_bottom = 108.0
+rotation = 0.148757
+text = "You got the true ending !"

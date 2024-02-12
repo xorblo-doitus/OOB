@@ -4,13 +4,13 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_edotc"]
 resource_local_to_scene = true
+size = Vector2(386, 55)
 
 [node name="Won" type="Label"]
 offset_left = -187.0
 offset_top = -241.0
 offset_right = 199.0
 offset_bottom = -186.0
-rotation = 0.222244
 text = "Congratulations, you won !"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -19,6 +19,7 @@ script = ExtResource("1_frq15")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(193, 27.5)
 shape = SubResource("RectangleShape2D_edotc")
 
 [connection signal="resized" from="." to="." method="_on_resized"]
