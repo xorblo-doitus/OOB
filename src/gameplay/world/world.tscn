@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ciceafugib0p4"]
+[gd_scene load_steps=19 format=3 uid="uid://ciceafugib0p4"]
 
 [ext_resource type="Script" path="res://src/gameplay/world/world.gd" id="1_nomqr"]
 [ext_resource type="PackedScene" uid="uid://cydou714l1g6v" path="res://src/gameplay/entities/player.tscn" id="2_enicr"]
@@ -105,16 +105,13 @@ _data = {
 "float": SubResource("Animation_atomd")
 }
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_3rvbt"]
-b = Vector2(0, -128)
-
 [node name="World" type="Node2D"]
 script = ExtResource("1_nomqr")
 
 [node name="Player" parent="." instance=ExtResource("2_enicr")]
 unique_name_in_owner = true
 z_index = -64
-position = Vector2(272, 317)
+position = Vector2(53, -178)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -142,7 +139,7 @@ position = Vector2(1280, 256)
 [node name="Grass2" parent="." instance=ExtResource("6_t1arw")]
 position = Vector2(204, 487)
 color = Color(0, 0.545098, 0, 1)
-polygon = PackedVector2Array(341, -61, 481, -51, 833, -30, 839, 106, -8, 64, 0, -27, 50, -57)
+polygon = PackedVector2Array(341, -61, 481, -51, 833, -30, 1160, -30, 1125, 79, 839, 106, -8, 64, 0, -27, 50, -57)
 
 [node name="Rock1" parent="." instance=ExtResource("6_t1arw")]
 position = Vector2(1021, 106)
@@ -395,6 +392,11 @@ position = Vector2(959, -173)
 material = ExtResource("5_gag1f")
 position = Vector2(27, -171)
 
+[node name="RespawnPoint7" parent="." instance=ExtResource("8_str6s")]
+material = ExtResource("5_gag1f")
+position = Vector2(103, 658)
+rotation = -0.670509
+
 [node name="RespawnPoint5" parent="." instance=ExtResource("8_str6s")]
 material = ExtResource("5_gag1f")
 position = Vector2(-286, 798)
@@ -450,67 +452,16 @@ rotation = 1.57079
 [node name="WoodenPlat" type="Node2D" parent="."]
 
 [node name="OneWayPlateform3" parent="WoodenPlat" instance=ExtResource("6_2wxex")]
-position = Vector2(1191, 464)
-width = 330.0
+position = Vector2(1352, 401)
+rotation = -1.57079
+width = 128.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WoodenPlat"]
-position = Vector2(1354, 465)
-
-[node name="Line2D" type="Line2D" parent="WoodenPlat/StaticBody2D"]
-modulate = Color(0.858824, 0.294118, 0, 1)
-points = PackedVector2Array(0, -128, 0, 0)
-width = 4.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WoodenPlat/StaticBody2D"]
-position = Vector2(-2, 0)
-shape = SubResource("SegmentShape2D_3rvbt")
-
-[node name="ColorRect" type="ColorRect" parent="WoodenPlat/StaticBody2D"]
-offset_left = -4.0
-offset_top = -136.0
-offset_right = 4.0
-offset_bottom = -128.0
+[node name="ColorRect" type="ColorRect" parent="WoodenPlat/OneWayPlateform3"]
+offset_left = 64.0
+offset_top = -2.0004
+offset_right = 72.0
+offset_bottom = 5.9996
 color = Color(0.858824, 0.294118, 0, 1)
-
-[node name="Pillar" type="Line2D" parent="WoodenPlat"]
-modulate = Color(0.858824, 0.294118, 0, 1)
-position = Vector2(1116, 596)
-points = PackedVector2Array(0, -128, 0, 0)
-width = 4.0
-
-[node name="Pillar2" type="Line2D" parent="WoodenPlat"]
-modulate = Color(0.858824, 0.294118, 0, 1)
-position = Vector2(1265, 596)
-points = PackedVector2Array(0, -128, 0, 0)
-width = 4.0
-
-[node name="Pillar3" type="Line2D" parent="WoodenPlat"]
-modulate = Color(0.858824, 0.294118, 0, 1)
-position = Vector2(1221, 591)
-rotation = 0.261799
-points = PackedVector2Array(0, -128, 0, 0)
-width = 4.0
-
-[node name="Pillar4" type="Line2D" parent="WoodenPlat"]
-modulate = Color(0.858824, 0.294118, 0, 1)
-position = Vector2(1072, 590)
-rotation = 0.261799
-points = PackedVector2Array(0, -128, 0, 0)
-width = 4.0
-
-[node name="Pillar5" type="Line2D" parent="WoodenPlat"]
-modulate = Color(0.858824, 0.294118, 0, 1)
-position = Vector2(1160, 591)
-rotation = -0.261799
-points = PackedVector2Array(0, -128, 0, 0)
-width = 4.0
-
-[node name="Pillar6" type="Line2D" parent="WoodenPlat"]
-modulate = Color(0.858824, 0.294118, 0, 1)
-position = Vector2(1309, 591)
-rotation = -0.261799
-points = PackedVector2Array(0, -128, 0, 0)
-width = 4.0
 
 [node name="OOBground2" parent="." instance=ExtResource("6_t1arw")]
 material = ExtResource("5_gag1f")
