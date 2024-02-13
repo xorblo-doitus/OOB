@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8qov0y3ns4fh"]
+[gd_scene load_steps=4 format=3 uid="uid://c8qov0y3ns4fh"]
 
 [ext_resource type="Script" path="res://src/gameplay/world/interactive/respawn_point.gd" id="1_wan65"]
+[ext_resource type="AudioStream" uid="uid://1l2ccvgwdhvx" path="res://src/assets/sounds/checkpoint.wav" id="2_sugqs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_osptb"]
 size = Vector2(31, 64)
@@ -21,5 +22,8 @@ width = 4.0
 position = Vector2(-3, 0)
 color = Color(1, 1, 0, 1)
 polygon = PackedVector2Array(5, -32, 32, -17, 5, -8)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_sugqs")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

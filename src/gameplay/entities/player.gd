@@ -12,12 +12,14 @@ var _not_on_floor_since_s: float = 0.0
 
 var respawn_position: Vector2 = Vector2(289, 412)
 
+@onready var death_sound: AudioStreamPlayer = $DeathSound
+
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("respawn"):
 		respawn()
 		return
 	
-	get_tree().set_group(&"one_way", "disabled", Input.is_action_pressed(&"down"))
+	get_tree().set_group(&"one_way", "disabled", Input.get_action_strength(&"down") > 0.5)
 	
 	for force in forces.values():
 		if force is Callable:
@@ -42,6 +44,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 	
 	move_and_slide()
+
+
+func kill() -> void:
+	death_sound.play()
+	respawn()
 
 
 func respawn() -> void:
