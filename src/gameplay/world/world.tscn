@@ -681,3 +681,13 @@ offset_right = -1769.0
 offset_bottom = 108.0
 rotation = 0.148757
 text = "You got the true ending !"
+
+[node name="Shaderpreloader" type="Node2D" parent="."]
+material = ExtResource("5_gag1f")
+position = Vector2(17, 16)
+
+[node name="ColorRect" type="ColorRect" parent="Shaderpreloader"]
+z_index = -1000
+material = ExtResource("5_gag1f")
+offset_right = 1.0
+offset_bottom = 1.0
