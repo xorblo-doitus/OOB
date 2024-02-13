@@ -114,7 +114,7 @@ script = ExtResource("1_nomqr")
 [node name="Player" parent="." instance=ExtResource("2_enicr")]
 unique_name_in_owner = true
 z_index = -64
-position = Vector2(282, 410)
+position = Vector2(272, 317)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -185,7 +185,7 @@ polygon = PackedVector2Array(267, -142, 277, -27, 336, -29, 295, -153)
 [node name="Tree3" parent="." instance=ExtResource("6_t1arw")]
 position = Vector2(678, 284)
 color = Color(0, 0.756863, 0, 1)
-polygon = PackedVector2Array(-124, -15, -53, -94, -110, -88, -41, -167, -106, -154, -35, -216, -90, -213, -12, -291, 65, -209, 5, -219, 83, -145, 16, -163, 83, -79, 27, -94, 107, -33)
+polygon = PackedVector2Array(-124, -15, -53, -94, -110, -88, -41, -167, -106, -154, -35, -216, -90, -213, -9, -295, 65, -209, 5, -219, 83, -145, 16, -163, 83, -79, 27, -94, 107, -33)
 
 [node name="Trunc" type="Polygon2D" parent="Tree3"]
 z_index = -128
@@ -219,10 +219,69 @@ polygon = PackedVector2Array(-29, 31, -15, -29, 19, -29, 39, 30)
 shape = SubResource("SegmentShape2D_crqjm")
 one_way_collision = true
 
-[node name="OneWayPlateform" parent="." instance=ExtResource("6_2wxex")]
-material = ExtResource("5_gag1f")
-position = Vector2(215, -33)
-width = 330.0
+[node name="Respawn" parent="." instance=ExtResource("11_0ljec")]
+offset_left = 256.0
+offset_top = 240.0
+offset_right = 304.0
+offset_bottom = 288.0
+rotation = 0.221657
+text = "R"
+
+[node name="RightLeft" type="Node2D" parent="."]
+position = Vector2(265, 454)
+rotation = -0.106003
+
+[node name="Right" parent="RightLeft" instance=ExtResource("11_0ljec")]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 48.0
+offset_bottom = 48.0
+rotation = 1.57079
+text = ""
+
+[node name="Polygon2D" type="Polygon2D" parent="RightLeft/Right"]
+position = Vector2(24, 26)
+polygon = PackedVector2Array(-5, -16, 5, -16, 5, -1.52588e-05, 13, -1.52588e-05, 0, 14, -13, -1.52588e-05, -5, -1.52588e-05)
+
+[node name="Left" parent="RightLeft" instance=ExtResource("11_0ljec")]
+offset_left = 0.0
+offset_top = 48.0
+offset_right = 48.0
+offset_bottom = 96.0
+rotation = -1.57079
+text = ""
+
+[node name="Polygon2D" type="Polygon2D" parent="RightLeft/Left"]
+position = Vector2(24, 26)
+polygon = PackedVector2Array(-5, -16, 5, -16, 5, -1.52588e-05, 13, -1.52588e-05, 0, 14, -13, -1.52588e-05, -5, -1.52588e-05)
+
+[node name="Up" parent="." instance=ExtResource("11_0ljec")]
+offset_left = 386.0
+offset_top = 494.0
+offset_right = 434.0
+offset_bottom = 542.0
+rotation = -3.02561
+text = ""
+
+[node name="Polygon2D" type="Polygon2D" parent="Up"]
+position = Vector2(24, 26)
+polygon = PackedVector2Array(-5, -16, 5, -16, 5, -1.52588e-05, 13, -1.52588e-05, 0, 14, -13, -1.52588e-05, -5, -1.52588e-05)
+
+[node name="Down" parent="." instance=ExtResource("11_0ljec")]
+offset_left = 978.0
+offset_top = -63.0
+offset_right = 1026.0
+offset_bottom = -15.0
+rotation = -0.141523
+text = ""
+
+[node name="Polygon2D" type="Polygon2D" parent="Down"]
+position = Vector2(24, 26)
+polygon = PackedVector2Array(-5, -16, 5, -16, 5, -1.52588e-05, 13, -1.52588e-05, 0, 14, -13, -1.52588e-05, -5, -1.52588e-05)
+
+[node name="OneWayPlateform14" parent="." instance=ExtResource("6_2wxex")]
+position = Vector2(829, -8)
+width = 320.0
 
 [node name="OneWayPlateform6" parent="." instance=ExtResource("6_2wxex")]
 material = ExtResource("5_gag1f")
@@ -320,6 +379,10 @@ shape = SubResource("RectangleShape2D_66050")
 
 [node name="RespawnPoint" parent="." instance=ExtResource("8_str6s")]
 position = Vector2(475, 403)
+
+[node name="RespawnPoint6" parent="." instance=ExtResource("8_str6s")]
+position = Vector2(285, 313)
+rotation = -3.27787
 
 [node name="RespawnPoint2" parent="." instance=ExtResource("8_str6s")]
 position = Vector2(997, 422)
