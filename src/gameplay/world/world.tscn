@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ciceafugib0p4"]
+[gd_scene load_steps=20 format=3 uid="uid://ciceafugib0p4"]
 
 [ext_resource type="Script" path="res://src/gameplay/world/world.gd" id="1_nomqr"]
 [ext_resource type="PackedScene" uid="uid://cydou714l1g6v" path="res://src/gameplay/entities/player.tscn" id="2_enicr"]
@@ -102,6 +102,9 @@ _data = {
 "float": SubResource("Animation_atomd")
 }
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_udlwm"]
+b = Vector2(0, 50)
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_nomqr")
 
@@ -136,12 +139,12 @@ position = Vector2(1280, 256)
 [node name="Grass2" parent="." instance=ExtResource("6_t1arw")]
 position = Vector2(204, 487)
 color = Color(0, 0.545098, 0, 1)
-polygon = PackedVector2Array(364, -62, 481, -51, 833, -30, 1160, -30, 1125, 79, 839, 106, -8, 64, 0, -27, 50, -57)
+polygon = PackedVector2Array(364, -62, 481, -51, 833, -30, 950.808, -30, 961, 21, 1148, 15, 1148, -36, 1160, -30, 1167, 31, 1125, 79, 839, 106, -8, 64, 0, -27, 50, -57)
 
 [node name="Rock1" parent="." instance=ExtResource("6_t1arw")]
 position = Vector2(1021, 106)
 color = Color(0.458824, 0.458824, 0.458824, 1)
-polygon = PackedVector2Array(53, -38, 18, 258, -32, 218, -52, -183, -12, -259)
+polygon = PackedVector2Array(99, -61, 18, 258, -32, 218, -52, -183, -12, -259)
 
 [node name="Rock2" parent="." instance=ExtResource("6_t1arw")]
 position = Vector2(-33, 195)
@@ -256,11 +259,11 @@ position = Vector2(24, 26)
 polygon = PackedVector2Array(-5, -16, 5, -16, 5, -1.52588e-05, 13, -1.52588e-05, 0, 14, -13, -1.52588e-05, -5, -1.52588e-05)
 
 [node name="Down" parent="." instance=ExtResource("11_0ljec")]
-offset_left = 978.0
-offset_top = -63.0
-offset_right = 1026.0
-offset_bottom = -15.0
-rotation = -0.141523
+offset_left = 1051.0
+offset_top = 22.0
+offset_right = 1099.0
+offset_bottom = 70.0
+rotation = 0.0798088
 text = ""
 
 [node name="Polygon2D" type="Polygon2D" parent="Down"]
@@ -373,7 +376,12 @@ position = Vector2(285, 313)
 rotation = -3.27787
 
 [node name="RespawnPoint2" parent="." instance=ExtResource("8_str6s")]
-position = Vector2(997, 422)
+position = Vector2(935, 356)
+rotation = 0.802544
+
+[node name="RespawnPoint8" parent="." instance=ExtResource("8_str6s")]
+position = Vector2(1246, 504)
+rotation = -1.61046
 
 [node name="RespawnPoint3" parent="." instance=ExtResource("8_str6s")]
 material = ExtResource("5_gag1f")
@@ -453,6 +461,13 @@ offset_top = -2.0004
 offset_right = 72.0
 offset_bottom = 5.9996
 color = Color(0.858824, 0.294118, 0, 1)
+
+[node name="PreventClipping" type="StaticBody2D" parent="WoodenPlat"]
+position = Vector2(1352, 401)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WoodenPlat/PreventClipping"]
+position = Vector2(0, 50)
+shape = SubResource("SegmentShape2D_udlwm")
 
 [node name="OOBground2" parent="." instance=ExtResource("6_t1arw")]
 material = ExtResource("5_gag1f")
@@ -687,3 +702,7 @@ offset_bottom = 1.0
 stream = ExtResource("12_mc1rc")
 autoplay = true
 bus = &"Music"
+
+[node name="OneWayPlateform" parent="." instance=ExtResource("6_2wxex")]
+position = Vector2(1253, 469)
+width = 200.0
