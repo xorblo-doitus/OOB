@@ -111,7 +111,7 @@ script = ExtResource("1_nomqr")
 [node name="Player" parent="." instance=ExtResource("2_enicr")]
 unique_name_in_owner = true
 z_index = -64
-position = Vector2(27, -181)
+position = Vector2(277, 326)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -606,12 +606,12 @@ rotation = 3.01883
 
 [node name="Spike19" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
 material = ExtResource("5_gag1f")
-position = Vector2(-135, -145)
+position = Vector2(-149, -142)
 rotation = 3.43096
 
 [node name="Spike18" parent="TrueWin/DeathPathReverse" instance=ExtResource("9_afmow")]
 material = ExtResource("5_gag1f")
-position = Vector2(-120, -102)
+position = Vector2(-134, -99)
 rotation = 3.01883
 
 [node name="OOBground3" parent="TrueWin/DeathPathReverse" instance=ExtResource("6_t1arw")]

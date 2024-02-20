@@ -15,6 +15,7 @@
 - The shortcut to go trough a one-way platform is now visible on the 3rd screen.
 - The fall just before the bad ending has no more spike, but you can't get out now.
 - Removed the one-way platform that prevent lucky access to secret ending, but made accessing this path randomly harder.
+- Made the post true ending easter-egg easier.
 
 ### Removed
 
