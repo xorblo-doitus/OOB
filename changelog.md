@@ -6,6 +6,24 @@
 
 ### Added
 
+- Nothing
+
+### Changed
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Nothing
+
+## [1.1] - 2023-02-20
+
+### Added
+
 - Music
 - Changelog (in the repo, not in game)
 - New easter-egg
@@ -19,10 +37,6 @@
 - Made the post true ending easter-egg easier.
 - The player now don't continue moving when respawning and not releasing a direction button.
 
-### Removed
-
-- Nothing
-
 ### Fixed
 
 - Being able to completely jump over the parkour toward the true ending.
@@ -33,5 +47,6 @@
 The Jam version.
 
 
-[unreleased]: https://github.com/xorblo-doitus/OOB/compare/1.0...HEAD
+[unreleased]: https://github.com/xorblo-doitus/OOB/compare/1.1...HEAD
+[1.1]: https://github.com/xorblo-doitus/OOB/compare/1.0...1.1
 [1.0]: https://github.com/xorblo-doitus/OOB/releases/tag/1.0
