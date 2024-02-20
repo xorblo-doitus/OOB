@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ciceafugib0p4"]
+[gd_scene load_steps=19 format=3 uid="uid://ciceafugib0p4"]
 
 [ext_resource type="Script" path="res://src/gameplay/world/world.gd" id="1_nomqr"]
 [ext_resource type="PackedScene" uid="uid://cydou714l1g6v" path="res://src/gameplay/entities/player.tscn" id="2_enicr"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cvurdtymxm38r" path="res://src/gameplay/world/interactive/spike.tscn" id="9_afmow"]
 [ext_resource type="PackedScene" uid="uid://clr627lga6td1" path="res://src/gameplay/world/terrain/long_platform.tscn" id="10_dnvgg"]
 [ext_resource type="PackedScene" uid="uid://bhpoqt1cktmiv" path="res://src/gameplay/world/terrain/collidable_label.tscn" id="11_0ljec"]
+[ext_resource type="AudioStream" uid="uid://2iaa7x2b0cie" path="res://src/assets/sounds/music.ogg" id="12_mc1rc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pg4ov"]
 size = Vector2(349, 76)
@@ -681,3 +682,8 @@ z_index = -1000
 material = ExtResource("5_gag1f")
 offset_right = 1.0
 offset_bottom = 1.0
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_mc1rc")
+autoplay = true
+bus = &"Music"
