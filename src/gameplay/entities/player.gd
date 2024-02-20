@@ -14,6 +14,8 @@ var respawn_position: Vector2 = Vector2(289, 412)
 
 @onready var death_sound: AudioStreamPlayer = $DeathSound
 
+
+var _stop_movement_s: float = 0
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("respawn"):
 		respawn()
@@ -36,12 +38,18 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and _not_on_floor_since_s < coyote_time_s:
 		velocity.y = jump_velocity
 	
-	
 	var direction := Input.get_axis("left", "right")
-	if direction:
-		velocity.x = direction * speed
+	
+	if _stop_movement_s > 0:
+		if not direction:
+			_stop_movement_s = 0
+		else:
+			_stop_movement_s -= delta
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
+		if direction:
+			velocity.x = direction * speed
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed)
 	
 	move_and_slide()
 
@@ -54,3 +62,4 @@ func kill() -> void:
 func respawn() -> void:
 	velocity = Vector2.ZERO
 	global_position = respawn_position
+	_stop_movement_s = 0.3
