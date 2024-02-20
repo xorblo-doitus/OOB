@@ -161,7 +161,7 @@ polygon = PackedVector2Array(103, -505, 46, 265, -18, 260, -32, 218, -183, 152, 
 z_index = 8
 position = Vector2(204, 487)
 color = Color(0, 0.545098, 0, 1)
-polygon = PackedVector2Array(-123, -25, -124, 57, -228, 66, -380, 158, -761, 130, -1312, 42, -1354, -105, -690, -87, -579, -5, -439, 8, -244, -101)
+polygon = PackedVector2Array(-123, -25, -124, 57, -228, 66, -198, 136, -242, 163, -215, 233, -237, 228, -313, 150, -393, 166, -453, 228, -448, 245, -501, 269, -761, 130, -1312, 42, -1354, -105, -690, -87, -579, -5, -439, 8, -244, -101)
 
 [node name="OOBground" parent="." instance=ExtResource("6_t1arw")]
 material = ExtResource("5_gag1f")

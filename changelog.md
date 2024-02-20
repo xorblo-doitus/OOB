@@ -25,7 +25,7 @@
 
 ### Fixed
 
-- Nothing
+- Being able to completely jump over the parkour toward the true ending.
 
 ## [1.0] - 2023-02-13
 
