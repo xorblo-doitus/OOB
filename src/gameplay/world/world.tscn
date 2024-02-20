@@ -291,12 +291,33 @@ position = Vector2(215, -33)
 
 [node name="OneWayPlateform3" parent="Node2D" instance=ExtResource("6_2wxex")]
 material = ExtResource("5_gag1f")
-position = Vector2(111, -142)
+position = Vector2(171, -115)
 width = 64.0
+
+[node name="OneWayPlateform4" parent="Node2D" instance=ExtResource("6_2wxex")]
+material = ExtResource("5_gag1f")
+position = Vector2(1, 1)
+width = 150.0
+
+[node name="Spike8" parent="Node2D/OneWayPlateform4" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(20, -1)
+
+[node name="Spike9" parent="Node2D/OneWayPlateform4" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(-20, -1)
+
+[node name="Spike10" parent="Node2D/OneWayPlateform4" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(-59, -1)
+
+[node name="Spike11" parent="Node2D/OneWayPlateform4" instance=ExtResource("9_afmow")]
+material = ExtResource("5_gag1f")
+position = Vector2(59, -1)
 
 [node name="OneWayPlateform5" parent="Node2D" instance=ExtResource("6_2wxex")]
 material = ExtResource("5_gag1f")
-position = Vector2(-68, -168)
+position = Vector2(-117, -137)
 width = 64.0
 
 [node name="Node2D2" type="Node2D" parent="."]
@@ -311,10 +332,6 @@ width = 64.0
 material = ExtResource("5_gag1f")
 position = Vector2(-76, -139)
 width = 64.0
-
-[node name="OneWayPlateform2" parent="." instance=ExtResource("6_2wxex")]
-position = Vector2(150, 531)
-width = 330.0
 
 [node name="OneWayPlateform3" parent="." instance=ExtResource("6_2wxex")]
 position = Vector2(-155, 430)
@@ -368,6 +385,11 @@ rotation = -1.61046
 [node name="RespawnPoint3" parent="." instance=ExtResource("8_str6s")]
 material = ExtResource("5_gag1f")
 position = Vector2(959, -173)
+
+[node name="RespawnPoint9" parent="." instance=ExtResource("8_str6s")]
+material = ExtResource("5_gag1f")
+position = Vector2(449, -180)
+rotation = -0.0930629
 
 [node name="RespawnPoint4" parent="." instance=ExtResource("8_str6s")]
 material = ExtResource("5_gag1f")
