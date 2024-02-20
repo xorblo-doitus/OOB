@@ -26,6 +26,7 @@
 ### Fixed
 
 - Being able to completely jump over the parkour toward the true ending.
+- Lagspike when showing a 0101-shadered object.
 
 ## [1.0] - 2023-02-13
 
