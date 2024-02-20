@@ -111,7 +111,7 @@ script = ExtResource("1_nomqr")
 [node name="Player" parent="." instance=ExtResource("2_enicr")]
 unique_name_in_owner = true
 z_index = -64
-position = Vector2(277, 326)
+position = Vector2(27, -181)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -149,7 +149,7 @@ polygon = PackedVector2Array(99, -61, 18, 258, -32, 218, -52, -183, -12, -259)
 [node name="Rock2" parent="." instance=ExtResource("6_t1arw")]
 position = Vector2(-33, 195)
 color = Color(0.458824, 0.458824, 0.458824, 1)
-polygon = PackedVector2Array(99, -333, 44, 248, -32, 218, 21, -338)
+polygon = PackedVector2Array(99, -365, 44, 248, -32, 218, 8.62265, -208.155, -82, -237, -105, -294, 18, -327)
 
 [node name="Rock3" parent="." instance=ExtResource("6_t1arw")]
 position = Vector2(-297, 188)
@@ -274,35 +274,17 @@ polygon = PackedVector2Array(-5, -16, 5, -16, 5, -1.52588e-05, 13, -1.52588e-05,
 position = Vector2(829, -8)
 width = 320.0
 
-[node name="OneWayPlateform6" parent="." instance=ExtResource("6_2wxex")]
-material = ExtResource("5_gag1f")
-position = Vector2(-39, -90)
-width = 64.0
-
-[node name="OneWayPlateform13" parent="." instance=ExtResource("6_2wxex")]
-material = ExtResource("5_gag1f")
-position = Vector2(-43, -28)
-width = 64.0
-
-[node name="OneWayPlateform7" parent="." instance=ExtResource("6_2wxex")]
-position = Vector2(-59, 120)
-width = 64.0
-
-[node name="OneWayPlateform11" parent="." instance=ExtResource("6_2wxex")]
-position = Vector2(-50, 43)
-width = 64.0
-
 [node name="OneWayPlateform8" parent="." instance=ExtResource("6_2wxex")]
-position = Vector2(-67, 182)
+position = Vector2(-71, 188)
 width = 64.0
 
 [node name="OneWayPlateform9" parent="." instance=ExtResource("6_2wxex")]
-position = Vector2(-76, 261)
-width = 64.0
+position = Vector2(-65, 260)
+width = 32.0
 
 [node name="OneWayPlateform12" parent="." instance=ExtResource("6_2wxex")]
-position = Vector2(-84, 336)
-width = 64.0
+position = Vector2(-73, 335)
+width = 32.0
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(215, -33)
@@ -314,7 +296,7 @@ width = 64.0
 
 [node name="OneWayPlateform5" parent="Node2D" instance=ExtResource("6_2wxex")]
 material = ExtResource("5_gag1f")
-position = Vector2(-76, -139)
+position = Vector2(-68, -168)
 width = 64.0
 
 [node name="Node2D2" type="Node2D" parent="."]
@@ -389,7 +371,8 @@ position = Vector2(959, -173)
 
 [node name="RespawnPoint4" parent="." instance=ExtResource("8_str6s")]
 material = ExtResource("5_gag1f")
-position = Vector2(27, -171)
+position = Vector2(-180, -97)
+rotation = 1.68794
 
 [node name="RespawnPoint7" parent="." instance=ExtResource("8_str6s")]
 material = ExtResource("5_gag1f")
@@ -414,10 +397,6 @@ autoplay = "float"
 
 [node name="Spike" parent="." instance=ExtResource("9_afmow")]
 position = Vector2(362, 439)
-
-[node name="Spike8" parent="." instance=ExtResource("9_afmow")]
-position = Vector2(-242, 161)
-rotation = 1.63489
 
 [node name="Spike2" parent="." instance=ExtResource("9_afmow")]
 material = ExtResource("5_gag1f")
