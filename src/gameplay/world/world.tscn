@@ -426,6 +426,11 @@ material = ExtResource("5_gag1f")
 position = Vector2(-180, -97)
 rotation = 1.68794
 
+[node name="RespawnPoint4" parent="RespawnPoint4" instance=ExtResource("8_str6s")]
+material = ExtResource("5_gag1f")
+position = Vector2(-241.392, 53.5801)
+rotation = 4.42096
+
 [node name="RespawnPoint7" parent="." instance=ExtResource("8_str6s")]
 material = ExtResource("5_gag1f")
 position = Vector2(103, 658)
