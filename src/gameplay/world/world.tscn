@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ciceafugib0p4"]
+[gd_scene load_steps=21 format=3 uid="uid://ciceafugib0p4"]
 
 [ext_resource type="Script" path="res://src/gameplay/world/world.gd" id="1_nomqr"]
 [ext_resource type="PackedScene" uid="uid://cydou714l1g6v" path="res://src/gameplay/entities/player.tscn" id="2_enicr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d313j65dc033f" path="res://src/gameplay/world/terrain/polygon_terrain.tscn" id="6_t1arw"]
 [ext_resource type="PackedScene" uid="uid://drtgovpc4eh4f" path="res://src/gameplay/world/terrain/water.tscn" id="7_bqvld"]
 [ext_resource type="PackedScene" uid="uid://c8qov0y3ns4fh" path="res://src/gameplay/world/interactive/respawn_point.tscn" id="8_str6s"]
+[ext_resource type="Texture2D" uid="uid://bdpgcf7jqp7k6" path="res://src/assets/images/godot_logo.svg" id="9_8vjve"]
 [ext_resource type="PackedScene" uid="uid://cvurdtymxm38r" path="res://src/gameplay/world/interactive/spike.tscn" id="9_afmow"]
 [ext_resource type="PackedScene" uid="uid://clr627lga6td1" path="res://src/gameplay/world/terrain/long_platform.tscn" id="10_dnvgg"]
 [ext_resource type="PackedScene" uid="uid://bhpoqt1cktmiv" path="res://src/gameplay/world/terrain/collidable_label.tscn" id="11_0ljec"]
@@ -17,7 +18,7 @@
 size = Vector2(349, 76)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oqi2p"]
-size = Vector2(294, 751)
+size = Vector2(92, 622)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66050"]
 size = Vector2(453, 178)
@@ -320,15 +321,40 @@ material = ExtResource("5_gag1f")
 position = Vector2(-117, -137)
 width = 64.0
 
-[node name="Node2D2" type="Node2D" parent="."]
-position = Vector2(1203, -140)
+[node name="EngineEasterEgg" type="Node2D" parent="."]
+position = Vector2(2348, 464)
 
-[node name="OneWayPlateform3" parent="Node2D2" instance=ExtResource("6_2wxex")]
+[node name="OneWayPlateform6" parent="EngineEasterEgg" instance=ExtResource("6_2wxex")]
+material = ExtResource("5_gag1f")
+position = Vector2(-302, -122)
+width = 256.0
+
+[node name="Grass" parent="EngineEasterEgg" instance=ExtResource("6_t1arw")]
+material = ExtResource("5_gag1f")
+color = Color(0, 0.545098, 0, 1)
+polygon = PackedVector2Array(-150, 77, -179, -123, 262, -128, 331, -217, 391, -355, 296, -401, 159, -404, 73, -499, 346, -527, 456, -516, 607, -485, 554, 56, 294, 113)
+
+[node name="Heart" parent="EngineEasterEgg" instance=ExtResource("6_t1arw")]
+material = ExtResource("5_gag1f")
+position = Vector2(324, -274)
+color = Color(1, 0, 0.866667, 1)
+polygon = PackedVector2Array(1, 15, -48, -13, -64, -28, -71, -45, -65, -72, -47, -80, -26, -76, -10, -58, -3, -77, 13, -89, 32, -85, 43, -72, 44, -50, 38, -32)
+
+[node name="GodotLogo" type="Sprite2D" parent="EngineEasterEgg"]
+material = ExtResource("5_gag1f")
+position = Vector2(39, -311)
+scale = Vector2(0.420244, 0.420244)
+texture = ExtResource("9_8vjve")
+
+[node name="AquaPlatforms" type="Node2D" parent="."]
+position = Vector2(1228, -8)
+
+[node name="OneWayPlateform4" parent="AquaPlatforms" instance=ExtResource("6_2wxex")]
 material = ExtResource("5_gag1f")
 position = Vector2(119, -126)
 width = 64.0
 
-[node name="OneWayPlateform5" parent="Node2D2" instance=ExtResource("6_2wxex")]
+[node name="OneWayPlateform5" parent="AquaPlatforms" instance=ExtResource("6_2wxex")]
 material = ExtResource("5_gag1f")
 position = Vector2(-76, -139)
 width = 64.0
@@ -352,7 +378,7 @@ z_index = -8
 position = Vector2(1654, 443)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Water2"]
-position = Vector2(-61, -304.5)
+position = Vector2(-162, -240)
 shape = SubResource("RectangleShape2D_oqi2p")
 
 [node name="Water" parent="Water2/CollisionShape2D" instance=ExtResource("7_bqvld")]
@@ -381,6 +407,10 @@ rotation = 0.802544
 [node name="RespawnPoint8" parent="." instance=ExtResource("8_str6s")]
 position = Vector2(1246, 504)
 rotation = -1.61046
+
+[node name="RespawnPoint10" parent="." instance=ExtResource("8_str6s")]
+position = Vector2(1434, 605)
+rotation = -0.407368
 
 [node name="RespawnPoint3" parent="." instance=ExtResource("8_str6s")]
 material = ExtResource("5_gag1f")
@@ -475,7 +505,7 @@ material = ExtResource("5_gag1f")
 position = Vector2(1147, 713)
 rotation = 2.87345
 color = Color(0.458824, 0.458824, 0.458824, 1)
-polygon = PackedVector2Array(-124, -111, 249, -96, 209, -20, 153, -34, -54, -59, -258, -26, -396, 41, -342, -91)
+polygon = PackedVector2Array(-124, -111, 110.727, 163.167, -114.328, 117.924, -262.748, -9.96899, -459.101, 25.2684, -342, -91)
 
 [node name="Win" type="Node2D" parent="."]
 position = Vector2(-768, 256)

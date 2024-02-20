@@ -8,6 +8,7 @@
 
 - Music
 - Changelog (in the repo, not in game)
+- New easter-egg
 
 ### Changed
 
