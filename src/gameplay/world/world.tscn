@@ -15,7 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://2iaa7x2b0cie" path="res://src/assets/sounds/music.ogg" id="12_mc1rc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pg4ov"]
-size = Vector2(349, 76)
+size = Vector2(349, 89)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oqi2p"]
 size = Vector2(92, 622)
@@ -368,7 +368,7 @@ z_index = -8
 position = Vector2(127, 542)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Water"]
-position = Vector2(48.5, -62)
+position = Vector2(48.5, -55.5)
 shape = SubResource("RectangleShape2D_pg4ov")
 
 [node name="Water" parent="Water/CollisionShape2D" instance=ExtResource("7_bqvld")]
